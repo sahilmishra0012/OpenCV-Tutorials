@@ -22,3 +22,4 @@ if k==27:#  27 is for escape character
 # Write Image when s is pressed.
 elif k==ord('s'):
     cv2.imwrite('bird.jpg',img)
+    cv2.destroyAllWindows()# To destroy all the windows
