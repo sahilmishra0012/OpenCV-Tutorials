@@ -13,9 +13,12 @@ print(img.shape)
 cv2.imshow('Image Window',img)
 
 #It prevents the window from closing immediately be giving it delay. Put 0 to close it by user
-cv2.waitKey(2000)
-cv2.destroyAllWindows()# To destroy all the windows
+# If delay is 0, then we need to put conditions for closing window else the window 
+# remains opened.
+k=cv2.waitKey(0)
 
-
+if k==27:
+    cv2.destroyAllWindows()# To destroy all the windows
 # Write Image
-cv2.imwrite('bird.jpg',img)
+elif k==ord('s'):
+    cv2.imwrite('bird.jpg',img)
