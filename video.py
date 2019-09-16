@@ -11,3 +11,7 @@ while(True):
         break
 cap.release()
 cv2.destroyAllWindows()
+
+
+# Currently camera drivers are missing on my system.
+# So, output file will be added only after installing drivers.
