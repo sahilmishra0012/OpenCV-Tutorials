@@ -9,6 +9,7 @@ img=cv2.line(img,(100,100),(400,500),(255,0,0),5)
 img=cv2.arrowedLine(img,(200,100),(600,500),(255,0,0),5)
 img=cv2.rectangle(img,(300,300),(900,700),(0,0,0),5)
 img=cv2.rectangle(img,(100,100),(200,200),(0,0,0),-1)# -1 fills the shape
+img=cv2.circle(img,(450,30),40,(0,255,0),2)# 40 is radius
 
 
 
