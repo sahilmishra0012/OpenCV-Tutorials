@@ -4,6 +4,8 @@ import cv2
 import numpy as np
 import requests
 
+print(cv2.CAP_PROP_FRAME_WIDTH)
+print(cv2.CAP_PROP_FRAME_HEIGHT)
 
 while(True):
 #Provide filename to read images or 0 to access camera
