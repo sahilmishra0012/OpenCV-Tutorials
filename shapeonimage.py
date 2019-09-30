@@ -5,12 +5,14 @@ import cv2
 img=cv2.imread('robin.jpg',1)
 
 #cv2.line(img,(Start Point Tuple),(End Point Tuple),(RGB Tuple),thickness)
-img=cv2.line(img,(100,100),(400,500),(255,0,0),5)
-img=cv2.arrowedLine(img,(200,100),(600,500),(255,0,0),5)
-img=cv2.rectangle(img,(300,300),(900,700),(0,0,0),5)
-img=cv2.rectangle(img,(100,100),(200,200),(0,0,0),-1)# -1 fills the shape
-img=cv2.circle(img,(450,30),40,(0,255,0),2)# 40 is radius
+img=cv2.line(img,pt1=(100,100),pt2=(400,500),color=(255,0,0),thickness=5)
+img=cv2.arrowedLine(img,pt1=(200,100),pt2=(600,500),color=(255,0,0),thickness=5)
+img=cv2.rectangle(img,pt1=(300,300),pt2=(900,700),color=(0,0,0),thickness=5)
+img=cv2.rectangle(img,pt1=(100,100),pt2=(200,200),color=(0,0,0),thickness=-1)# -1 fills the shape
+img=cv2.circle(img,center=(450,400),radius=40,color=(0,255,0),thickness=2)# 40 is radius
 
+font=cv2.FONT_HERSHEY_SIMPLEX
+img=cv2.putText(img,"OpenCV",(200,200),fontFace=font,fontScale=10,color=(0,255,0))
 
 
 cv2.imshow('Image Window',img)
